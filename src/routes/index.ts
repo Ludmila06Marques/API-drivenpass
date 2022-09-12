@@ -1,7 +1,7 @@
 import { Router } from "express";
 import authRoute from "./authRoute.js";
 import cardRoute from "./cardRoutes.js";
-import credencialRoute from "./credencialRoute.js";
+import credencialRoute from "./credentialRoute.js";
 import noteRoute from "./noteRoute.js";
 import wifiRoute from "./wifiRoute.js";
 

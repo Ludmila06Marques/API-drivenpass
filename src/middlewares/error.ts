@@ -1,26 +1,15 @@
 import { NextFunction, Request, Response } from "express";
 
-const ERRORS ={
-    unauthorized:401,
-    conflict:409,
-    not_found:404,
-    bad_request:400
-};
+import { statusCodeFromErrors, testError } from "../utils/errorUtils.js";
 
-export default function errorHandler(
-    err,
-    req : Request,
-    res : Response,
-    next: NextFunction
-){
-    console.log(err);
-    const type:string = err.type;
-    let statusCode = ERRORS(type);
-    if(!statusCode) statusCode=500;
+export default function handleErrorsMiddleware(err:any, req: Request, res: Response, next: NextFunction) {
+  console.log(err)
+  
+  if(testError(err)) {
+    const statusCode = statusCodeFromErrors(err.type);
+    return res.status(statusCode).send(err.message)
+  }
 
-    return res.sendStaus(statusCode)
-
-
+  res.sendStatus(500);
 }
 
-()
