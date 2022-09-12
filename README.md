@@ -1,1 +1,18 @@
-# projeto19-drivenpass
+https://drivenludpass.herokuapp.com/login
+https://drivenludpass.herokuapp.com/sign-up"
+https://drivenludpass.herokuapp.com/card
+https://drivenludpass.herokuapp.com/card
+https://drivenludpass.herokuapp.com/card/:id
+https://drivenludpass.herokuapp.com/card/:id
+https://drivenludpass.herokuapp.com/credential
+https://drivenludpass.herokuapp.com/credential
+https://drivenludpass.herokuapp.com/credential/:id
+https://drivenludpass.herokuapp.com/credential/:id
+https://drivenludpass.herokuapp.com/note
+https://drivenludpass.herokuapp.com/note
+https://drivenludpass.herokuapp.com/note/:id
+https://drivenludpass.herokuapp.com/note/:id
+https://drivenludpass.herokuapp.com/wifi
+https://drivenludpass.herokuapp.com/wifi
+https://drivenludpass.herokuapp.com/wifi/:id
+https://drivenludpass.herokuapp.com/wifi/:id
