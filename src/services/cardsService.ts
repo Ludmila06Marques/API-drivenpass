@@ -27,7 +27,7 @@ export async function getCard(userId: number, cardId: number) {
   }
 }
 
-export async function createCard(user: User, card: CreateCardSchema) {
+export async function createCardFunction(user: User, card: CreateCardSchema) {
 
  
   const existingCard = await getCardByTitle(user.id, card.title);

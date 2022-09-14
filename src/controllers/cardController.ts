@@ -1,8 +1,12 @@
 import { Request , Response } from "express"
-import { getAll , getCard , deleteCard } from "../services/cardsService.js";
+import { getAll , getCard , deleteCard , createCardFunction } from "../services/cardsService.js";
 
 export async function createCard(req:Request ,res:Response){
-  return  console.log("to na rota createCard")
+  const {user} = res.locals;
+  const card = req.body;
+
+  await createCardFunction(user, card);
+  res.sendStatus(201); 
 }
 
 export async function getCardFunction(req:Request ,res:Response){
