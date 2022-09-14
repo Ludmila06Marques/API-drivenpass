@@ -16,13 +16,16 @@ export async function getCardFunction(req:Request ,res:Response){
 }
 
 export async function getOneCard(req: Request , res:Response){
+  console.log("to qa")
   const { user } = res.locals;
   const cardId = parseInt(req.params.id);
   if(isNaN(cardId)){
     res.sendStatus(422);
-  const card = await  getCard(user.id, cardId);
-  res.send(card);
+   
+ 
 }
+const card = await  getCard(user.id, cardId);
+res.send(card);
 }
 
 

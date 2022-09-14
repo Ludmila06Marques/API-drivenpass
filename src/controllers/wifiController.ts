@@ -1,11 +1,14 @@
 import { Request , Response } from "express"
-import { getAllWifi , getOneWifiFunction ,deleteWifiService } from "../services/wifiService.js";
+import { getAllWifi , getOneWifiFunction ,deleteWifiService , createWifiService } from "../services/wifiService.js";
 
 export async function createWifi(req:Request ,res:Response){
   const { user } = res.locals;
   const wifi = req.body;
-  await createWifi(user, wifi);
+
+  await createWifiService(user, wifi);
   res.sendStatus(201); 
+
+  
 }
 
 export async function getWifi(req:Request ,res:Response){

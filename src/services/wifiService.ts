@@ -25,7 +25,8 @@ export async function getOneWifiFunction(userId:number, wifiId: number) {
   }
 }
 
-export async function createWifi(user: User, network: CreateWifiSchema) {
+export async function createWifiService(user: User, network: CreateWifiSchema) {
+  console.log("cheguei")
   const networkInfos = {...network, password: encrypt(network.password)};
   await  createWifiFunction(user.id, networkInfos);
 }

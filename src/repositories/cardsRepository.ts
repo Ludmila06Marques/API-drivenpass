@@ -23,6 +23,7 @@ export async function getCardByTitle(userId: number, title: string) {
 }
 
 export async function insertCard(userId: number, card: CreateCardSchema) {
+  console.log("passeiaq")
   return prisma.card.create({
     data: {...card, userId }
   })
